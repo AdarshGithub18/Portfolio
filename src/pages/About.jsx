@@ -19,8 +19,8 @@ const About = () => {
         </div>
 
         <div className="myphotos">
-          <div class="flex gap-4">
-            <div class=" w-40 h-full gap-4 flex text-center"></div>
+          <div className="flex gap-4">
+            <div className=" w-40 h-full gap-4 flex text-center"></div>
           </div>
         </div>
       </section>
