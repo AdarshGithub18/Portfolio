@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 // email.js
 import emailjs, { send } from '@emailjs/browser';
 // icons
@@ -11,6 +11,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 const Contact = () => {
+  useEffect(() => {
+    document.title = 'Contact | Adarsh Chougule';
+  }, []);
   const form = useRef();
   const notify = () =>
     toast.success('Message sent successfully!', {

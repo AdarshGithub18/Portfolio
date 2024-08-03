@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect } from 'react';
 import image from '../assets/projectsImages/pp.png';
 
 //icons
 import { RxExternalLink } from 'react-icons/rx';
 
-const ProjectCards = () => {
+const Project = () => {
   const projects = [
     {
       title: 'Movie vault',
@@ -39,8 +39,9 @@ const ProjectCards = () => {
           {projects.map((project, idx) => {
             return (
               <>
-                <div key={idx} className="inline-block md:max-w-[300px] f">
+                <div className="inline-block md:max-w-[300px] f">
                   <div
+                    key={idx}
                     className={`flex flex-col gap-3 p-2 cursor-pointer mt-2 md:mt-3 
                     }
                   `}
@@ -80,4 +81,4 @@ const ProjectCards = () => {
   );
 };
 
-export default ProjectCards;
+export default Project;
