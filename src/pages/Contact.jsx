@@ -2,8 +2,7 @@ import React, { useRef, useEffect } from 'react';
 // email.js
 import emailjs, { send } from '@emailjs/browser';
 // icons
-import { FaLinkedinIn } from 'react-icons/fa';
-import { LuGithub, LuTwitter } from 'react-icons/lu';
+import { FaLinkedinIn, FaEnvelope, FaTwitter, FaGithub } from 'react-icons/fa';
 // toast
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,6 +10,33 @@ import 'react-toastify/dist/ReactToastify.css';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../variants';
 const Contact = () => {
+  const socialLinks = [
+    {
+      title: 'Email',
+      icon: <FaEnvelope />,
+      link: 'mailto:chouguleadarsh123@gmail.com',
+      target: '_blank',
+    },
+    {
+      title: 'Twitter',
+      icon: <FaTwitter />,
+      link: 'https://twitter.com/_adarshchougule',
+      target: '_blank',
+    },
+    {
+      title: 'LinkedIn',
+      icon: <FaLinkedinIn />,
+      link: 'https://www.linkedin.com/in/adarsh-chougule-2041b622b',
+      target: '_blank',
+    },
+    {
+      title: 'Github',
+      icon: <FaGithub />,
+      link: 'https://github.com/Adarsh18',
+      target: '_blank',
+    },
+  ];
+  // changin page title
   useEffect(() => {
     document.title = 'Contact | Adarsh Chougule';
   }, []);
@@ -113,27 +139,14 @@ const Contact = () => {
           </button>
         </form>
         <div className="links flex text-gray-600 text-3xl gap-4 mt-10 ">
-          <a
-            href="https://www.linkedin.com/in/adarsh-chougule-2041b622b/"
-            target="_blank"
-            className="hover:text-black"
-          >
-            <FaLinkedinIn />
-          </a>
-          <a
-            href="https://github.com/AdarshGithub18"
-            target="_blank"
-            className="hover:text-black"
-          >
-            <LuGithub />
-          </a>
-          <a
-            href="https://x.com/_adarshchougule"
-            target="_blank"
-            className="hover:text-black"
-          >
-            <LuTwitter />
-          </a>
+          {socialLinks.map((link, idx) => {
+            return (
+              <>
+                <span key={idx}>{link.icon}</span>
+                <a href={link.link} target={link.target}></a>
+              </>
+            );
+          })}
         </div>
       </motion.section>
       <ToastContainer />

@@ -10,6 +10,7 @@ const Home = () => {
   const projects = [
     {
       title: 'Movie vault',
+
       description:
         'Built a React movie app with real-time data and persistent management.',
       image: image,
