@@ -4,7 +4,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Projects from './pages/Projects';
+import ProjectDetails from './pages/ProjectDetails';
+
 import { useState } from 'react';
+import Error404 from './pages/Error404';
 
 function App() {
   const [dark, setDark] = useState(false);
@@ -15,7 +18,7 @@ function App() {
 
   return (
     <div
-      className={`mx-auto max-w-[800px] items-center justify-center gap-3 px-4 md:px-6 md:pb-10
+      className={`mx-auto max-w-[800px] items-center justify-center gap-3 px-4 md:px-6 md:pb-44
        
     `}
     >
@@ -26,6 +29,8 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/project-details" element={<ProjectDetails />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
     </div>
   );

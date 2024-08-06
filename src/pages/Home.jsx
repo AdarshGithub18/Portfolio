@@ -1,8 +1,7 @@
 import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
 import { RxExternalLink } from 'react-icons/rx';
 import image from '../assets/projectsImages/pp.png';
+import { useNavigate } from 'react-router-dom';
 
 //icons
 
@@ -52,14 +51,11 @@ const Home = () => {
     },
   ];
 
+  const navigate = useNavigate();
+
   return (
     <>
-      <motion.section
-        variants={fadeIn('up', 0.5)}
-        initial="hidden"
-        whileInView={'show'}
-        viewport={{ once: true, amount: 0.7 }}
-      >
+      <section>
         <div className="mt-6 md:mt-[50px]">
           <div className="max-w-[800px] flex flex-col gap-8  ">
             <h1 className="text-3xl text-gray-700 font-semibold transition-opacity duration-300">
@@ -99,7 +95,10 @@ const Home = () => {
             {projects.map((project, idx) => {
               return (
                 <>
-                  <div className="inline-block md:max-w-[300px] f">
+                  <div
+                    className="inline-block md:max-w-[300px]"
+                    onClick={() => navigate('project-details')}
+                  >
                     <div
                       key={idx}
                       className={`flex flex-col gap-3 p-2 cursor-pointer mt-2 md:mt-3 
@@ -126,7 +125,7 @@ const Home = () => {
                           className="flex gap-1 items-center hover:text-black hover:bg-gray-200 rounded p-[3px]"
                           target="_blank"
                         >
-                          Visit Project
+                          Live
                           <RxExternalLink />
                         </a>
                       </div>
@@ -137,7 +136,7 @@ const Home = () => {
             })}
           </div>
         </section>
-      </motion.section>
+      </section>
     </>
   );
 };

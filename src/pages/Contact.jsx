@@ -7,15 +7,14 @@ import { FaLinkedinIn, FaEnvelope, FaTwitter, FaGithub } from 'react-icons/fa';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { motion } from 'framer-motion';
-import { fadeIn } from '../variants';
 const Contact = () => {
+  // spcial links
   const socialLinks = [
     {
       title: 'Email',
       icon: <FaEnvelope />,
       link: 'mailto:chouguleadarsh123@gmail.com',
-      target: '_blank',
+      target: '_self',
     },
     {
       title: 'Twitter',
@@ -40,6 +39,8 @@ const Contact = () => {
   useEffect(() => {
     document.title = 'Contact | Adarsh Chougule';
   }, []);
+
+  // emailjs
   const form = useRef();
   const notify = () =>
     toast.success('Message sent successfully!', {
@@ -89,17 +90,11 @@ const Contact = () => {
 
   return (
     <>
-      <motion.section
-        className=" mt-6 md:mt-12 mx-auto max-w-[500px] "
-        variants={fadeIn('up', 0.5)}
-        initial="hidden"
-        whileInView={'show'}
-        viewport={{ once: true, amount: 0.7 }}
-      >
+      <section className=" mt-6 md:mt-12 mx-auto  max-w-[500px] ">
         <h1 className="text-gray-700 text-2xl md:text-3xl font-semibold ">
           Get in touch{' '}
         </h1>
-        <p className=" my-8 text-gray-600">
+        <p className=" my-8 text-gray-600 sm:text-sm">
           I'd love to hear from you! Whether you have a question or just want to
           say hi, feel free to drop a message.
         </p>
@@ -132,23 +127,25 @@ const Contact = () => {
           ></textarea>
           <button
             type="submit"
-            value={send}
             className="bg-gray-600 text-white p-2 font-semibold hover:bg-gray-800 rounded-md "
           >
             Send
           </button>
         </form>
-        <div className="links flex text-gray-600 text-3xl gap-4 mt-10 ">
+        <div className="links flex text-gray-600 text-2xl md:text-3xl gap-4 mt-14 ">
           {socialLinks.map((link, idx) => {
             return (
               <>
-                <span key={idx}>{link.icon}</span>
-                <a href={link.link} target={link.target}></a>
+                <div key={idx}>
+                  <a href={link.link} target={link.target}>
+                    <span>{link.icon}</span>
+                  </a>
+                </div>
               </>
             );
           })}
         </div>
-      </motion.section>
+      </section>
       <ToastContainer />
     </>
   );

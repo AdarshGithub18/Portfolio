@@ -112,7 +112,7 @@ const About = () => {
 
         <div className=" flex flex-col md:flex-row gap-2 md:gap-9 ">
           <h2 className="shrink-0 md:w-32 text-gray-600 ">About</h2>
-          <div className="flex flex-col gap-6 text-gray-600 text-balance ">
+          <div className="flex flex-col gap-6 text-gray-600 text-wrap ">
             <p>
               Hi, I’m Adarsh Chougule! I have a Bachelor's degree in Information
               Technology from{' '}
