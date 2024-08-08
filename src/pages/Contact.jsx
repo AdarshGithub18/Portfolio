@@ -7,6 +7,9 @@ import { FaLinkedinIn, FaEnvelope, FaTwitter, FaGithub } from 'react-icons/fa';
 import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
+// motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
 const Contact = () => {
   // spcial links
   const socialLinks = [
@@ -90,16 +93,32 @@ const Contact = () => {
 
   return (
     <>
-      <section className=" mt-6 md:mt-12 mx-auto  max-w-[500px] ">
-        <h1 className="text-gray-700 text-2xl md:text-3xl font-semibold ">
+      <section className=" mt-6 md:mt-12 mx-auto h-screen max-w-[500px] ">
+        <motion.h1
+          variants={fadeIn('up', 0.1)}
+          initial="hidden"
+          animate={'show'}
+          viewport={{ once: true, amount: 0.1 }}
+          className="text-gray-700 dark:text-gray-100 text-2xl md:text-3xl font-semibold "
+        >
           Get in touch{' '}
-        </h1>
-        <p className=" my-8 text-gray-600 sm:text-sm">
+        </motion.h1>
+        <motion.p
+          variants={fadeIn('up', 0.2)}
+          initial="hidden"
+          animate={'show'}
+          viewport={{ once: true, amount: 0.2 }}
+          className=" my-8 text-gray-600 dark:text-gray-200 sm:text-sm"
+        >
           I'd love to hear from you! Whether you have a question or just want to
           say hi, feel free to drop a message.
-        </p>
+        </motion.p>
 
-        <form
+        <motion.form
+          variants={fadeIn('up', 0.3)}
+          initial="hidden"
+          animate={'show'}
+          viewport={{ once: true, amount: 0.3 }}
           ref={form}
           onSubmit={sendEmail}
           className="flex flex-col gap-4 justify-center mt-12 md:mt-14  "
@@ -108,31 +127,41 @@ const Contact = () => {
             type="text"
             required
             name="user_name"
-            placeholder="Enter your name..."
-            className="p-3 outline-none bg-gray-50 rounded-md text-gray-700 mb-2 text-sm"
+            placeholder="Enter your name"
+            className="p-3 outline-none bg-gray-50 dark:bg-neutral-800 rounded-md dark:text-gray-100 text-gray-700 mb-2 text-sm"
           />
           <input
             type="email"
             required
             name="user_email"
-            placeholder="Enter your email..."
-            className="outline-none p-3 bg-gray-50 rounded-md  text-gray-700 mb-2 text-sm"
+            placeholder="Enter your email"
+            className="outline-none p-3 bg-gray-50 rounded-md dark:text-gray-100 dark:bg-neutral-800 text-gray-700 mb-2 text-sm"
           />
           <textarea
             name="message"
             id=""
             required
-            placeholder="Enter your message..."
-            className="outline-none p-3  bg-gray-50 rounded-md text-gray-700 mb-2 text-sm"
+            placeholder="Enter your message"
+            className="outline-none p-3 dark:bg-neutral-800 dark:text-gray-100 bg-gray-50 rounded-md text-gray-700 mb-2 text-sm"
           ></textarea>
-          <button
+          <motion.button
+            variants={fadeIn('up', 0.4)}
+            initial="hidden"
+            whileInView={'show'}
+            viewport={{ once: true, amount: 0.4 }}
             type="submit"
-            className="bg-gray-600 text-white p-2 font-semibold hover:bg-gray-800 rounded-md "
+            className="bg-gray-600 text-white p-2 dark:bg-gray-100 dark:text-gray-600 font-medium hover:bg-gray-800 rounded-md "
           >
             Send
-          </button>
-        </form>
-        <div className="links flex text-gray-600 text-2xl md:text-3xl gap-4 mt-14 ">
+          </motion.button>
+        </motion.form>
+        <motion.div
+          variants={fadeIn('up', 0.5)}
+          initial="hidden"
+          animate={'show'}
+          viewport={{ once: true, amount: 0.5 }}
+          className="links flex text-gray-600 text-2xl dark:text-gray-300 md:text-3xl gap-4 mt-14 "
+        >
           {socialLinks.map((link, idx) => {
             return (
               <>
@@ -144,7 +173,7 @@ const Contact = () => {
               </>
             );
           })}
-        </div>
+        </motion.div>
       </section>
       <ToastContainer />
     </>
