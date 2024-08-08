@@ -3,6 +3,10 @@ import { NavLink } from 'react-router-dom';
 import logo from '../assets/A.png';
 import logo2 from '../assets/A2.png';
 
+// motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../variants';
+
 // icons
 import { IoSunnyOutline } from 'react-icons/io5';
 import { PiMoonLight } from 'react-icons/pi';
@@ -74,7 +78,11 @@ const Header = ({ theme, setTheme, handleTheme }) => {
 
         {/* mobile menu */}
 
-        <ul
+        <motion.ul
+          variants={fadeIn('up', 0.1)}
+          initial="hidden"
+          animate={'show'}
+          viewport={{ once: true, amount: 0.1 }}
           className={`${toggle ? 'md:hidden opacity-100' : ' hidden'}
         flex flex-col bg-white dark:bg-black dark:text-gray-300 absolute right-0 z-10 w-40 top-16 gap-2 origin-top-right overflow-auto rounded-xl p-2 text-base shadow-md transition-opacity duration-300`}
         >
@@ -91,7 +99,7 @@ const Header = ({ theme, setTheme, handleTheme }) => {
               </NavLink>
             );
           })}
-        </ul>
+        </motion.ul>
       </nav>
     </header>
   );
