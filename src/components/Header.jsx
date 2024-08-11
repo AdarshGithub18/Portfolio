@@ -79,12 +79,12 @@ const Header = ({ theme, setTheme, handleTheme }) => {
         {/* mobile menu */}
 
         <motion.ul
-          variants={fadeIn('up', 0.1)}
+          variants={fadeIn('up', 0.3)}
           initial="hidden"
           animate={'show'}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.3 }}
           className={`${toggle ? 'md:hidden opacity-100' : ' hidden'}
-        flex flex-col bg-white dark:bg-black dark:text-gray-300 absolute right-0 z-10 w-40 top-16 gap-2 origin-top-right overflow-auto rounded-xl p-2 text-base shadow-md transition-opacity duration-300`}
+        flex flex-col bg-white dark:bg-black dark:text-gray-300 absolute right-0 z-10 w-40 top-16 gap-2 origin-top-right overflow-auto rounded-xl p-2 text-base shadow-md transition-opacity `}
         >
           {navLinks.map((link, idx) => {
             return (

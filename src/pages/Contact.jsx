@@ -34,7 +34,7 @@ const Contact = () => {
     {
       title: 'Github',
       icon: <FaGithub />,
-      link: 'https://github.com/Adarsh18',
+      link: 'https://github.com/AdarshGithub18',
       target: '_blank',
     },
   ];
