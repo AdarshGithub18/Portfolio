@@ -32,7 +32,7 @@ const Projects = () => {
       description:
         'A website for an interior design firm, created with html,css and javascript.',
       github: 'https://github.com/yourusername/interior-design-firm-website',
-      live: 'www.designboot.com',
+      live: 'https://designbootstudio.com/',
       image: img,
       arrow: <GoArrowUpRight />,
     },
@@ -113,6 +113,7 @@ const Projects = () => {
                         </a>
                         <a
                           href={project.live}
+                          target="_blank"
                           className="flex dark:hover:bg-neutral-800 hover:bg-gray-100 px-1 rounded-md gap-2"
                         >
                           Live{' '}
