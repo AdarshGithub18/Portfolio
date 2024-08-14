@@ -55,19 +55,17 @@ const Home = () => {
     },
   ];
 
-  const navigate = useNavigate();
-
   return (
     <>
       <section>
         <div className="mt-6 md:mt-[50px]">
-          <div className="max-w-[800px] flex flex-col gap-8  ">
+          <div className="max-w-[800px] flex flex-col gap-6  ">
             <motion.h1
               variants={fadeIn('up', 0.1)}
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: true, amount: 0.1 }}
-              className="text-3xl text-gray-700 dark:text-white font-semibold transition-opacity duration-300"
+              className="text-2xl md:text-3xl text-gray-700 dark:text-white font-semibold transition-opacity duration-300"
             >
               Hey, Adarsh here!
             </motion.h1>
