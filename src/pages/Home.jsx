@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import { RxExternalLink } from 'react-icons/rx';
-import image from '../assets/projectsImages/Movie-vault.png';
-import img3 from '../assets/projectsImages/airbnb.png';
-
-import { useNavigate } from 'react-router-dom';
+import img from '../assets/projectsImages/Movie-vault.png';
+import img2 from '../assets/projectsImages/search-countries.png';
 
 import { motion } from 'framer-motion';
 
@@ -17,24 +15,17 @@ const Home = () => {
 
       description:
         'Built a React movie app with real-time data and persistent management.',
-      image: image,
+      image: img,
       github: 'https://github.com/AdarshGithub18/Movie-Vault',
       live: 'https://movie-vault-byadarsh.netlify.app/',
     },
     {
-      title: 'Mega Muscle',
+      title: 'Search Countries',
       description:
-        'Built a React movie app with real-time data and persistent management.',
-      image: image,
-      github: 'https://github.com/AdarshGithub18/Movie-Vault',
-      live: 'https://movie-vault-byadarsh.netlify.app/',
-    },
-    {
-      name: 'Airbnb Experience Page Clone',
-      description: 'A clone of the Airbnb Experience page built with React.',
-      github: 'https://github.com/yourusername/airbnb-experience-clone',
-      live: 'https://yourliveurl.com/airbnb-experience-clone',
-      image: img3,
+        'Built a responsive Search Countries app with React, Tailwind CSS, and REST API.',
+      github: 'https://github.com/AdarshGithub18/Search-Country',
+      live: 'https://countries-info-by-adarsh.vercel.app/',
+      image: img2,
     },
   ];
 
@@ -59,7 +50,7 @@ const Home = () => {
     <>
       <section>
         <div className="mt-6 md:mt-[50px]">
-          <div className="max-w-[800px] flex flex-col gap-6  ">
+          <div className="max-w-[800px] flex flex-col gap-3  ">
             <motion.h1
               variants={fadeIn('up', 0.1)}
               initial="hidden"
@@ -74,7 +65,7 @@ const Home = () => {
               initial="hidden"
               whileInView={'show'}
               viewport={{ once: true, amount: 0.2 }}
-              className="max-w-lg text-gray-600 text-base dark:text-gray-300"
+              className="max-w-lg text-gray-600 text-sm  md:text-base dark:text-gray-300"
             >
               I am a frontend developer who builds for the web with a design
               oriented approach. I focus on creating visually appealing and

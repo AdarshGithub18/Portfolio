@@ -14,6 +14,7 @@ import { RiMenu3Fill } from 'react-icons/ri';
 import { AiOutlineClose } from 'react-icons/ai';
 
 const Header = ({ theme, setTheme, handleTheme }) => {
+  // toggle for navigation
   const [toggle, setToggle] = useState(false);
 
   function handleToggle() {

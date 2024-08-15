@@ -1,29 +1,24 @@
 import React, { useEffect } from 'react';
-import img from '../assets/projectsImages/designboot.png';
-import img2 from '../assets/projectsImages/Movie-vault.png';
-import img3 from '../assets/projectsImages/airbnb.png';
+
+// projects images
+import img from '../assets/projectsImages/Movie-vault.png';
+import img2 from '../assets/projectsImages/designboot.png';
+import img3 from '../assets/projectsImages/search-countries.png';
+
 import { GoArrowUpRight } from 'react-icons/go';
 
+//motion
 import { motion } from 'framer-motion';
-
 import { fadeIn } from '../variants';
 const Projects = () => {
   const projects = [
-    {
-      name: 'Airbnb Experience Page Clone',
-      description: 'A clone of the Airbnb Experience page built with React.',
-      github: 'https://github.com/yourusername/airbnb-experience-clone',
-      live: 'https://yourliveurl.com/airbnb-experience-clone',
-      image: img3,
-      arrow: <GoArrowUpRight />,
-    },
     {
       name: 'Movie Watchlist App',
       description:
         'A movie watchlist app using React and Tailwind CSS with TMDb API integration.',
       github: 'https://github.com/AdarshGithub18/Movie-Vault',
       live: 'https://movie-vault-byadarsh.netlify.app/',
-      image: img2,
+      image: img,
       arrow: <GoArrowUpRight />,
     },
 
@@ -33,16 +28,16 @@ const Projects = () => {
         'A website for an interior design firm, created with html,css and javascript.',
       github: 'https://github.com/yourusername/interior-design-firm-website',
       live: 'https://designbootstudio.com/',
-      image: img,
+      image: img2,
       arrow: <GoArrowUpRight />,
     },
     {
-      name: 'Dark Theme Portfolio',
+      name: 'Search Countries',
       description:
-        'An enhanced portfolio website with a dark theme switcher, built with React and Tailwind CSS.',
-      github: 'https://github.com/yourusername/dark-theme-portfolio',
-      live: 'https://yourliveurl.com/dark-theme-portfolio',
-      image: img,
+        'Built a responsive Search Countries app with React, Tailwind CSS, and REST API, featuring search, filters, dark mode, and country info cards."',
+      github: 'https://github.com/AdarshGithub18/Search-Country',
+      live: 'https://countries-info-by-adarsh.vercel.app/',
+      image: img3,
       arrow: <GoArrowUpRight />,
     },
   ];
