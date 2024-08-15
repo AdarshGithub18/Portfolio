@@ -42,7 +42,7 @@ const Home = () => {
     { title: 'Github', link: 'https://github.com/AdarshGithub18' },
     {
       title: 'Resume',
-      link: 'https://drive.google.com/file/d/1z0oHghvIRdn-2CoPNVlV0qL8ijGkjWu7/view?usp=drive_link',
+      link: 'https://drive.google.com/file/d/133RWktG9BhBKJz-o0PQm-d51MIlfUEkx/view?usp=drive_link',
     },
   ];
 
