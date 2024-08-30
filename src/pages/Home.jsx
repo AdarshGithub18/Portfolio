@@ -32,7 +32,7 @@ const Home = () => {
       description:
         'Built a responsive e-commerce site with React and Tailwind CSS for seamless browsing and purchasing.',
       github: 'https://github.com/AdarshGithub18/E-commerce',
-      live: 'hhttps://urbancart-by-adarsh.vercel.app/',
+      live: 'https://urbancart-by-adarsh.vercel.app/',
       image: img3,
     },
   ];
