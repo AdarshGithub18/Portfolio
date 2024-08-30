@@ -50,7 +50,7 @@ const Home = () => {
     { title: 'Github', link: 'https://github.com/AdarshGithub18' },
     {
       title: 'Resume',
-      link: 'https://drive.google.com/file/d/133RWktG9BhBKJz-o0PQm-d51MIlfUEkx/view?usp=drive_link',
+      link: 'https://drive.google.com/file/d/1KGg4UVi4zJGpVmlw87rQPhRm3C6j7pEa/view?usp=sharing',
     },
   ];
 
