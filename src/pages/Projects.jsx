@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import img from '../assets/projectsImages/Movie-vault.png';
 import img2 from '../assets/projectsImages/designboot.png';
 import img3 from '../assets/projectsImages/search-countries.png';
+import img4 from '../assets/projectsImages/urban-cart.png';
 
 import { GoArrowUpRight } from 'react-icons/go';
 
@@ -38,6 +39,15 @@ const Projects = () => {
       github: 'https://github.com/AdarshGithub18/Search-Country',
       live: 'https://countries-info-by-adarsh.vercel.app/',
       image: img3,
+      arrow: <GoArrowUpRight />,
+    },
+    {
+      name: 'Urban Cart',
+      description:
+        'Developed a responsive e-commerce website using React and Tailwind CSS, featuring a user-friendly interface for browsing and purchasing products',
+      github: 'https://github.com/AdarshGithub18/E-commerce',
+      live: 'https://urbancart-by-adarsh.vercel.app/',
+      image: img4,
       arrow: <GoArrowUpRight />,
     },
   ];

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { RxExternalLink } from 'react-icons/rx';
 import img from '../assets/projectsImages/Movie-vault.png';
 import img2 from '../assets/projectsImages/search-countries.png';
-
+import img3 from '../assets/projectsImages/urban-cart.png';
 import { motion } from 'framer-motion';
 
 import { fadeIn } from '../variants';
@@ -26,6 +26,14 @@ const Home = () => {
       github: 'https://github.com/AdarshGithub18/Search-Country',
       live: 'https://countries-info-by-adarsh.vercel.app/',
       image: img2,
+    },
+    {
+      title: 'Urban Cart',
+      description:
+        'Built a responsive e-commerce site with React and Tailwind CSS for seamless browsing and purchasing.',
+      github: 'https://github.com/AdarshGithub18/E-commerce',
+      live: 'hhttps://urbancart-by-adarsh.vercel.app/',
+      image: img3,
     },
   ];
 
