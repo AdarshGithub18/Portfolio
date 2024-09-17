@@ -156,7 +156,10 @@ const About = () => {
             >
               Hi, I’m Adarsh Chougule! I have a Bachelor's degree in Information
               Technology from{' '}
-              <a href="https://www.bkbirlacollege.com" className="underline">
+              <a
+                href="https://www.bkbirlacollegekalyan.com"
+                className="underline"
+              >
                 BK Birla College
               </a>
               &nbsp;and specialize in front-end development. I’m passionate
